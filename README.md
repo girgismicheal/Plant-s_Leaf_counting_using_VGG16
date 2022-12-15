@@ -1,8 +1,9 @@
 # Plant-s_Leaf_counting_using_VGG16
 
 ## Overview
-
 A Deep Learning Case Study that aims at automating the tedious task of observing Plant Phenotypes(leaves in this case). Given a plant image, it can predict the leaf count which can help monitor the health and growth of the plants. The approach involved using various Deep Learning technqiues using Segmentation models, Convolutional models for Regression and Transfer Learning models for predicting the leaf count.
+
+![](Images/output1.png)
 
 ## Dataset (Leaf counting dataset):
 
