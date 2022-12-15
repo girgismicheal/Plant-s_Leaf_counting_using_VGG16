@@ -1,5 +1,9 @@
 # Plant-s_Leaf_counting_using_VGG16
 
+## Overview
+
+A Deep Learning Case Study that aims at automating the tedious task of observing Plant Phenotypes(leaves in this case). Given a plant image, it can predict the leaf count which can help monitor the health and growth of the plants. The approach involved using various Deep Learning technqiues using Segmentation models, Convolutional models for Regression and Transfer Learning models for predicting the leaf count.
+
 ## Dataset (Leaf counting dataset):
 
 Description: The dataset is plant images at different resolutions captured with a variety of cameras. There are images showing plants with approximatelty 1,2,3,4 and 6 leafs. The images are part of a Leaf counting dataset which can be downloaded from the Aarhus University, Denmark.
@@ -13,6 +17,13 @@ you can download the splitted folders for train and test from here [Splitted ver
 ## Results and conclusion:
 
 ### Compare the classification and regression
+**Mentoring Curves**
+
+|                              | Accuracy Curve | Loss Curve              |
+|------------------------------|------------------------|-------------------------|
+| **Part1 a (Classification)** | ![](Images/output.png) | ![](Images/output2.png) |
+| **Part1 b (Regression)**     | ![](Images/output6.png) | ![](Images/output7.png) |
+
 
 **As shown in the table below:**
 
@@ -20,6 +31,13 @@ you can download the splitted folders for train and test from here [Splitted ver
 |------------------------------|---------------------|-----------------------|----------------------|
 | **Part1 a (Classification)** | 100%                | 46%                   |          43%         |
 | **Part1 b (Regression)**     | 64%                 | 32.7%                 |          31%         |
+
+**Confusion matrices**
+
+|                              | Training Metrix         | Validation Metrix       | Testing Metrix           |
+|------------------------------|-------------------------|-------------------------|--------------------------|
+| **Part1 a (Classification)** | ![](Images/output3.png) | ![](Images/output4.png) | ![](Images/output5.png)  |
+| **Part1 b (Regression)**     | ![](Images/output8.png) | ![](Images/output9.png) | ![](Images/output10.png) |
 
 
 - **The first model which is in part1 a (classification):** the model is overfitting the training dataset as the training accuracy is much higher than the validation and testing accuracy, as the dataset is small and the model has no regularization or dropout layers to prevent the overfitting.
@@ -30,6 +48,14 @@ you can download the splitted folders for train and test from here [Splitted ver
 
 ### Generalizing the models using regularization techniques
 
+**Mentoring Curves**
+
+|                              | Accuracy Curve           | Loss Curve               |
+|------------------------------|--------------------------|--------------------------|
+| **Part2 (regularization + batch normalization)** | ![](Images/output11.png) | ![](Images/output12.png) |
+| **Part2 (regularization + batch normalization + data augmentation)**     | ![](Images/output16.png) | ![](Images/output17.png) |
+
+
 **As shown in the figure below:**
 
 |                                                                      | Training accuracy | Validation accuracy | Testing accuracy |
@@ -37,6 +63,13 @@ you can download the splitted folders for train and test from here [Splitted ver
 | **Part1a (Classification)**                                          | 100%              | 46%                 | 43%              |
 | **Part2 (regularization + batch normalization)**                     | 87%               | 55%                 | 44%              |
 | **Part2 (regularization + batch normalization + data augmentation)** | 81%               | 66%                 | 55%              |
+
+**Confusion matrices**
+ 
+|                                                    | Training Metrix          | Validation Metrix        | Testing Metrix           |
+|----------------------------------------------------|--------------------------|--------------------------|--------------------------|
+| **Part2 (regularization + batch normalization)**   | ![](Images/output13.png) | ![](Images/output14.png) | ![](Images/output15.png) |
+| **Part2 (regularization + batch normalization)**   | ![](Images/output18.png) | ![](Images/output19.png) | ![](Images/output20.png) |
 
 
 **The above table fits our expectations as we discussed before in part1:**
