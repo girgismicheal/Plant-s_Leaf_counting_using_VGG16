@@ -8,4 +8,24 @@ Link to download: you can download the dataset from the original website here [O
 you can download the splitted folders for train and test from here [Splitted version](https://vision.eng.au.dk/leaf-counting-dataset/).
 
 
-** both regularization and augmentation helped the model to generalize better and reduced the overfitting, as the augmentation helped to increase the small size of the training set, and the regularization prevent the model's weight from overfitting.
+## Methodology
+
+## Results and conclusion:
+
+### Compare the classification and regression
+
+**As shown in the table below:**
+
+|                              | Training accuracy   | Validation accuracy   |    Testing accuracy  |
+|------------------------------|---------------------|-----------------------|----------------------|
+| **Part1 a (Classification)** | 100%                | 46%                   |          43%         |
+| **Part1 b (Regression)**     | 64%                 | 32.7%                 |          31%         |
+
+
+- **The first model which is in part1 a (classification):** the model is overfitting the training dataset as the training accuracy is much higher than the validation and testing accuracy, as the dataset is small and the model has no regularization or dropout layers to prevent the overfitting.
+- **The second model which is in part 1 b (regression):** the model is slightly overfitting the training dataset as the training is much higher than the validation and testing accuracy, as the dataset is small and needs to be augmented.
+- **The best model is the classification,** as it has the highest validation and testing accuracy.
+- **Both models are overfitting,** due to the small size of the training set in addition to the absence of regularization, batch normalization, and augmentation in part one.
+- **Finally,** we expect part 2 to be more generalized and the training accuracy to be reduced, and the validation, and testing accuracy to increase after adding the batch normalization, dropout, and increase in the training size using augmentation.
+
+
