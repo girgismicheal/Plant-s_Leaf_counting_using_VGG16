@@ -8,7 +8,8 @@ A Deep Learning Case Study that aims at automating the tedious task of observing
 ## Dataset (Leaf counting dataset):
 The dataset used in this project are plant images at different resolutions captured with a variety of cameras. There are images showing plants with approximately 1,2,3,4 and 6 leafs. The images are part of a Leaf counting dataset by Teimouri et al. [1] which can be downloaded from the Aarhus University, Denmark:
 There are 200 images for each of the 5 classes. As Figure 1 shows, there is a great variety of plants and image conditions. The dataset is split into a training and a testing set where there are 180 images per class for training and validation; and 20 images for testing.
-The dataset Link: [Leaf counting dataset](https://vision.eng.au.dk/leaf-counting-dataset/)
+
+The Dataset Link: [Leaf counting dataset](https://vision.eng.au.dk/leaf-counting-dataset/)
 
 ## Results and conclusion:
 
