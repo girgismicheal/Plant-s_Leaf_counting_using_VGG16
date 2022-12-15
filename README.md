@@ -28,4 +28,25 @@ you can download the splitted folders for train and test from here [Splitted ver
 - **Both models are overfitting,** due to the small size of the training set in addition to the absence of regularization, batch normalization, and augmentation in part one.
 - **Finally,** we expect part 2 to be more generalized and the training accuracy to be reduced, and the validation, and testing accuracy to increase after adding the batch normalization, dropout, and increase in the training size using augmentation.
 
+### Generalizing the models using regularization techniques
 
+**As shown in the figure below:**
+
+|                                                                      | Training accuracy | Validation accuracy | Testing accuracy |
+|----------------------------------------------------------------------|-------------------|---------------------|------------------|
+| **Part1a (Classification)**                                          | 100%              | 46%                 | 43%              |
+| **Part2 (regularization + batch normalization)**                     | 87%               | 55%                 | 44%              |
+| **Part2 (regularization + batch normalization + data augmentation)** | 81%               | 66%                 | 55%              |
+
+
+**The above table fits our expectations as we discussed before in part1:**
+
+- **The first experiment by adding some batch normalization and dropout layers:**
+    - The model begins to generalize better as the training accuracy reduced from 100% to 87% while the validation and testing increased to 55% and 44%, so it's definitely a huge improvement.
+    - Still has kind of overfitting, as training accuracy is 88% while the validation and testing are around 50% but the dropout and batch normalization help the model to generalize a bit.
+
+- **The second experiment after augmenting the training set and retraining the regulized network we found:**
+    - The model becomes more generalized as the training dataset has been increased, which allowed the model to learn better the different variations in the data such as zooming, rotation, and flipping.
+    - The training accuracy decreased from 87% to 81%, while the validation and testing accuracy increased significantly to 66% and 55%, almost 11% improvement in both validation and testing accuracies.
+
+- **Finally,** both regularization and augmentation helped the model to generalize better and reduced the overfitting, as the augmentation helped to increase the small size of the training set, and the regularization prevent the model's weight from overfitting.
